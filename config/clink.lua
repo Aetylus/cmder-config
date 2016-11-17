@@ -2,7 +2,7 @@
 function set_prompt_filter()
     cwd = clink.get_cwd()
     --prompt = "\x1b[1;32;40m{cwd}{git}{hg}\x1b[1;32;40m> \x1b[0m"
-    prompt = "\x1b[1;32;40m{cwd}{git}{hg}> \x1b[0m"
+    prompt = "\x1b[1;32;40m{cwd} {git}{hg} \n\x1b[1;30;40m> \x1b[0m"
     clink.prompt.value = string.gsub(prompt, "{cwd}", cwd)
 end
 
